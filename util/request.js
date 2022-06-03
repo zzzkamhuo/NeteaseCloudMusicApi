@@ -53,12 +53,12 @@ const createRequest = (method, url, data = {}, options) => {
     if (options.realIP) headers['X-Real-IP'] = options.realIP
     // headers['X-Real-IP'] = '118.88.88.88'
     if (typeof options.cookie === 'object') {
-      if (!options.cookie.MUSIC_U) {
-        // 游客
-        if (!options.cookie.MUSIC_A) {
-          options.cookie.MUSIC_A = config.anonymous_token
-        }
-      }
+      // if (!options.cookie.MUSIC_U) {
+      //   // 游客
+      //   if (!options.cookie.MUSIC_A) {
+      //     options.cookie.MUSIC_A = config.anonymous_token
+      //   }
+      // }
       headers['Cookie'] = Object.keys(options.cookie)
         .map(
           (key) =>
